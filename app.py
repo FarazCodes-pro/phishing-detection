@@ -9,6 +9,8 @@ nltk.download('punkt_tab')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+
+
 ps = PorterStemmer()
 
 def transform_text(text):
@@ -34,8 +36,8 @@ def transform_text(text):
 
   return " ".join(y)
 
-tfidf = pickle.load(open('.venv/vectorizer.pkl', 'rb'))
-model = pickle.load(open('.venv/model.pkl', 'rb'))
+tfidf = pickle.load(open('.vectorizer.pkl', 'rb'))
+model = pickle.load(open('.model.pkl', 'rb'))
 
 st.title("Phishing Email Detection")
 input_sms = st.text_area("Enter the text")
